@@ -11,7 +11,7 @@ apt-get -y install mariadb-server
 apt-get -y install sysbench
 apt-get -y install python3 python3-pip
 
-pip install speedtest-cli
+pip3 install speedtest-cli
 
 
 sysbench --test=fileio --file-total-size=6G prepare
