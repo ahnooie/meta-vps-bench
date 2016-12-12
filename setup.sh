@@ -9,6 +9,8 @@ apt-get update
 apt-get -y upgrade
 apt-get -y install mariadb-server
 apt-get -y install sysbench
+apt-get -y install python3 python3-pip
+
 
 sysbench --test=fileio --file-total-size=6G prepare
 
