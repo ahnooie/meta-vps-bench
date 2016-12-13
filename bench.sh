@@ -2,43 +2,43 @@
 
 {
 echo "**** CPU1" 
-sysbench --test=cpu --cpu-max-prime=10000 --num-threads=1 run  --json-file=cpu1.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=1 run >> cpu1.result
 
 echo "**** CPU2" 
-sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run --json-file=cpu2.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run >> cpu2.result
 
 echo "**** CPU4" 
-sysbench --test=cpu --cpu-max-prime=10000 --num-threads=4 run  --json-file=cpu4.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=4 run >> cpu4.result
 
 echo "**** OLTP1" 
-sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=1 --max-time=60 run  --json-file=oltp1.json
+sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=1 --max-time=60 run >> oltp1.result
 
 echo "**** OLTP4" 
-sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=4 --max-time=60 run  --json-file=oltp4.json
+sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=4 --max-time=60 run >> oltp4.result
 
 echo "**** OLTP8" 
-sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=8 --max-time=60 run  --json-file=oltp8.json
+sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=8 --max-time=60 run >> oltp8.result
 
 echo "**** RNDRW - random read/write"
-sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrw --max-time=300 run --json-file=rndrw.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrw --max-time=300 run >> rndrw.result
 
 echo "**** RNDWR - random write"
-sysbench --test=fileio --file-total-size=6G --file-test-mode=rndwr --max-time=300 run --json-file=rndwr.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=rndwr --max-time=300 run >> rmdwr.result
 
 echo "**** SEQWR - sequential write" 
-sysbench --test=fileio --file-total-size=6G --file-test-mode=seqwr --max-time=300 run  --json-file=seqwr.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=seqwr --max-time=300 run >> seqwr.result
 
 echo "**** SEQRD - sequential read" 
-sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrd --max-time=300 run  --json-file=seqrd.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrd --max-time=300 run >> seqrd.result
 
 echo "**** RNDRD - random read" 
-sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrd --max-time=300 run  --json-file=rndrd.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrd --max-time=300 run >> rndrd.result
 
 echo "**** SEQREWR - sequential rewrite" 
-sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrewr --max-time=300 run  --json-file=seqrewr.json
+sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrewr --max-time=300 run >> seqrewr.result
 
 echo "**** MEMORY 100M" 
-sysbench --test=memory run  --json-file=memory.json
+sysbench --test=memory run  >> memory.result
 
 echo "**** SPEEDTEST DEFAULT"
 speedtest-cli
@@ -128,4 +128,4 @@ speedtest-cli --server 603 --json >> speedtest603.json
 speedtest-cli --server 1776 --json >> speedtest1776.json  
 
 
-} >> result
+} >> result.log
