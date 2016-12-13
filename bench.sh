@@ -2,13 +2,13 @@
 
 {
 echo "**** CPU1" 
-sysbench --test=cpu --cpu-max-prime=100000 --num-threads=1 run  --json-file=cpu1.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=1 run  --json-file=cpu1.json
 
 echo "**** CPU2" 
-sysbench --test=cpu --cpu-max-prime=100000 --num-threads=2 run --json-file=cpu2.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run --json-file=cpu2.json
 
 echo "**** CPU4" 
-sysbench --test=cpu --cpu-max-prime=100000 --num-threads=4 run  --json-file=cpu4.json
+sysbench --test=cpu --cpu-max-prime=10000 --num-threads=4 run  --json-file=cpu4.json
 
 echo "**** OLTP1" 
 sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=1 --max-time=60 run  --json-file=oltp1.json

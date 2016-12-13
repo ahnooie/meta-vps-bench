@@ -22,7 +22,7 @@ sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root
 
 # Compile sysbench with json-output support
 
-git clone https://github.com/ahnooie/meta-vps-bench.git
+git clone https://github.com/ahnooie/sysbench.git
 cd sysbench
 git checkout 1.0-report-styles
 git pull
