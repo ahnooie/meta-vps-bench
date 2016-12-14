@@ -1,3 +1,5 @@
 test_file.*
 result
 *.json
+*.result
+*.log
