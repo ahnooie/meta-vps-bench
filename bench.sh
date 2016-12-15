@@ -37,7 +37,7 @@ sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrd --max-time=30
 echo "**** SEQREWR - sequential rewrite" 
 sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrewr --max-time=300 run >> seqrewr.result
 
-echo "**** MEMORY 100M" 
+echo "**** MEMORY" 
 sysbench --test=memory run  >> memory.result
 
 echo "**** SPEEDTEST DEFAULT"
