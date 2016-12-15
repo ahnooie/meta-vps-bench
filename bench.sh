@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# rm
+
 {
 echo "**** CPU1" 
 sysbench --test=cpu --cpu-max-prime=10000 --num-threads=1 run >> cpu1.result
