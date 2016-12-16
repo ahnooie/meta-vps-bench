@@ -18,9 +18,6 @@ RESULT_SEQRD="$(cat seqrd.result |grep Read|grep Written|cut -f2 -d"("|cut -f1 -
 RESULT_SEREWR="$(cat seqrewr.result |grep Read|grep Written|cut -f2 -d"("|cut -f1 -d")"|xargs)"
 RESULT_SEQWR="$(cat seqwr.result |grep Read|grep Written|cut -f2 -d"("|cut -f1 -d")"|xargs)"
 
-RESULT_DOWNLOAD_1531="$(cat speedtest1531.json|grep \"Download\")"
-RESULT_UPLOAD_1531="$(cat speedtest1531.json|grep \"Upload\")"
-
 # Argentina
 #  900) Telecentro (Buenos Aires, Argentina) [11156.20 km]
 RESULT_DOWNLOAD_900="$(cat speedtest900.result| grep \"Download\")"
