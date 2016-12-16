@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat result |grep -i "requests\|Transactions\|Operations\|Transferred\|total time:\|\*\*\*\*\|Hosted\|Download:\|Upload:"
+cat result.log |grep -i "requests\|Transactions\|Operations\|Transferred\|total time:\|\*\*\*\*\|Hosted\|Download:\|Upload:"
 
 RESULT_CPU1="$(cat cpu1.result |grep "total time:"| cut -f2 -d":"|xargs)"
 RESULT_CPU2="$(cat cpu2.result |grep "total time:"| cut -f2 -d":"|xargs)"
