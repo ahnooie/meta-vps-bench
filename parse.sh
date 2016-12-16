@@ -10,9 +10,9 @@ RESULT_OLTP1="$(cat oltp1.result |grep transactions: |cut -f2 -d"("|cut -f1 -d")
 RESULT_OLTP4="$(cat oltp4.result |grep transactions: |cut -f2 -d"("|cut -f1 -d")"|xargs)"
 RESULT_OLTP8="$(cat oltp8.result |grep transactions: |cut -f2 -d"("|cut -f1 -d")"|xargs)"
 
-RESULT_RNDWR="$(cat rmdwr.result|grep Requests|cut -f1 -d"R"|xargs)"
-RESULT_RNDRD="$(cat rmdrd.result|grep Requests|cut -f1 -d"R"|xargs)"
-RESULT_RNDRW="$(cat rmdrw.result|grep Requests|cut -f1 -d"R"|xargs)"
+RESULT_RNDWR="$(cat rndwr.result|grep Requests|cut -f1 -d"R"|xargs)"
+RESULT_RNDRD="$(cat rndrd.result|grep Requests|cut -f1 -d"R"|xargs)"
+RESULT_RNDRW="$(cat rndrw.result|grep Requests|cut -f1 -d"R"|xargs)"
 
 RESULT_SEQRD="$(cat seqrd.result |grep Read|grep Written|cut -f2 -d"("|cut -f1 -d")"|xargs)"
 RESULT_SEREWR="$(cat seqrewr.result |grep Read|grep Written|cut -f2 -d"("|cut -f1 -d")"|xargs)"
