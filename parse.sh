@@ -121,8 +121,8 @@ RESULT_DOWNLOAD_603="$(cat speedtest603.result| grep \"Download\")"
 RESULT_UPLOAD_603="$(cat speedtest603.result| grep \"Upload\")"
 
 # 1776) Comcast (Chicago, IL, United States) [2762.90 km]
-RESULT_UPLOAD_1776="$(cat speedtest1776.result  | grep \"Upload\")"
-RESULT_DOWNLOAD_1776="$(cat speedtest1776.result  | grep \"Download\")"
+RESULT_UPLOAD_1776="$(cat speedtest1776.result  | grep "Upload")"
+RESULT_DOWNLOAD_1776="$(cat speedtest1776.result  | grep "Download")"
 
 
 
