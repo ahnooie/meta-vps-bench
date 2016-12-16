@@ -25,7 +25,7 @@ echo "**** RNDRW - random read/write"
 sysbench --test=fileio --file-total-size=6G --file-test-mode=rndrw --max-time=300 run >> rndrw.result
 
 echo "**** RNDWR - random write"
-sysbench --test=fileio --file-total-size=6G --file-test-mode=rndwr --max-time=300 run >> rmdwr.result
+sysbench --test=fileio --file-total-size=6G --file-test-mode=rndwr --max-time=300 run >> rndwr.result
 
 echo "**** SEQWR - sequential write" 
 sysbench --test=fileio --file-total-size=6G --file-test-mode=seqwr --max-time=300 run >> seqwr.result
