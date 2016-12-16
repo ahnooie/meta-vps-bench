@@ -51,9 +51,9 @@ speedtest-cli
 #  900) Telecentro (Buenos Aires, Argentina) [11156.20 km]
 speedtest-cli --server 900  >> speedtest900.result
 
-# Austria
-# 1738) www.drei.at (Vienna, Austria) [8571.38 km]
-speedtest-cli --server 1738  >> speedtest1738.result
+# Australia
+# 2627)Telstra (Perth, Australia) [18701.04 km
+speedtest-cli --server 2627  >> speedtest2627.result
 
 # Brazil
 #  3068) TIM Brasil (Sao Paulo, Brazil) [10920.56 km]
