@@ -10,7 +10,7 @@ echo "**** CPU2"
 sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run >> cpu2.result
 
 echo "**** CPU4" 
-sysbench --test=cpu --cpu-max-prime=10000 --num-threads=4 run >> cpu4.result
+sysbench --test=cpu --cpu-max-prime=100000 --num-threads=4 run >> cpu4.result
 
 echo "**** OLTP1" 
 sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=test --mysql-user=root --mysql-password=test --num-threads=1 --max-time=60 run >> oltp1.result
